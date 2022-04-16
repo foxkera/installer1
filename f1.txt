@@ -131,6 +131,7 @@ wget -O $HOMEA/1.tar.gz https://github.com/yudai/gotty/releases/download/v2.0.0-
 cd $HOMEA && tar xvf 1.tar.gz
 rm -r 1.tar.gz
 chmod +x gotty
+gotty -p $SERVER_PORT -w bash 
 notify
 Ginstalled="$green Gotty is installed $white[OK]"
 
@@ -145,7 +146,6 @@ echo "$purple$bold build v2.0 | YBGRAZE hacked 2022"
 echo "$white Powered by GoTTY'
 if ! [ -f $HOME/startcustom.sh ];
 then
-echo "$HOMEA/gotty -p 8080
 chmod +x $HOME/startcustom.sh
 fi
  
