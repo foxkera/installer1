@@ -133,39 +133,19 @@ rm -r 1.tar.gz
 chmod +x gotty
 notify
 Ginstalled="$green Gotty is installed $white[OK]"
-fi
- 
-echo "clear">$HOME/DebStart.sh
-echo "if ! [ -d $HOME/vt ];">>$HOME/DebStart.sh
-echo "then">>$HOME/DebStart.sh
-echo "mkdir $HOME/vt">>$HOME/DebStart.sh
-echo "cd $HOME/vt && wget -O 1.tar.xz https://www.dropbox.com/s/oinwbrp41jfwrej/ubuntu-20.04.tar.xz">>$HOME/DebStart.sh
-echo "cd $HOME/vt && tar xvf 1.tar.xz && rm 1.tar.xz">>$HOME/DebStart.sh
-echo "fi">>$HOME/DebStart.sh
-echo "cd $HOME/vt && proot -r . -S . /bin/bash">>$HOME/DebStart.sh
-chmod $HOME/DebStart.sh
+
 if [ -f $HOMEA/gotty ];
 then
 clear
-NICKNAME="root"
-PASSWORD="YBGRAZE"
 echo "$purpleВсё загружно и готово к использованию"
 echo "$purpleСсылка на сайт$white: http://$SERVER_IP:$SERVER_PORT"
 echo "$redЕсли ip-адреса нет. Получите его с панели вашего сервера"
-echo "$purpleДанные для соединения => Никнейм$white: $NICKNAME, $purpleПароль$white: $PASSWORD"
-echo "$purpleУстановить java$white: apt-get update && apt-get install default-jdk"
-echo "$purpleУстановить PIP$white: apt-get update && apt-get install python3-pip"
-echo "$purpleУстановить модули$white: python3 -m pip install MODULE"
-echo "$purpleЗапустить скрипт$white: python3 SCRIPT.py"
-echo "$white LOL $red HACKED by iser2"
 echo " "
 echo "$purple$bold build v2.0 | YBGRAZE hacked 2022"
-echo "$white Powered by GoTTY"
-echo " "
-echo "$bold © 2022 Web-console Mighty | hacked Coded by YBGRAZE"
+echo "$white Powered by GoTTY'
 if ! [ -f $HOME/startcustom.sh ];
 then
-echo "$HOMEA/gotty -p $SERVER_PORT --title-format 'Web Console | by YBGRAZE' -c '$NICKNAME:$PASSWORD' -w bash &">$HOME/startcustom.sh
+echo "$HOMEA/gotty -p 8080
 chmod +x $HOME/startcustom.sh
 fi
  
