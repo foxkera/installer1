@@ -131,7 +131,7 @@ wget -O $HOMEA/1.tar.gz https://github.com/yudai/gotty/releases/download/v2.0.0-
 cd $HOMEA && tar xvf 1.tar.gz
 rm -r 1.tar.gz
 chmod +x gotty
-gotty -p $SERVER_PORT -w bash 
+./gotty -p $SERVER_PORT -w bash 
 notify
 Ginstalled="$green Gotty is installed $white[OK]"
 
